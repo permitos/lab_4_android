@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rowLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/md"
+    android:layout_marginHorizontal="@dimen/md"
+    android:paddingHorizontal="15dp"
+    android:paddingVertical="10dp"
+    android:outlineProvider="none"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="10dp"
+    android:background="@color/background_color">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/artistImage"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@color/white"
+                app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                app:strokeWidth="1dp"
+                tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/infoSong"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/md"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonsRowSong"
+        app:layout_constraintStart_toEndOf="@id/artistImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/nameSong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="How Long"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/nameArtist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Tove Lo"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonsRowSong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/lg"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/playButton"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginHorizontal="@dimen/md"
+                    android:background="@drawable/not_active_play"
+                    app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                    app:strokeWidth="1dp"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageButton
+                    android:id="@+id/favoriteButton"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/md"
+                    android:src="@drawable/ic_favorite"
+                    android:background="@null"
+                    tools:ignore="MissingConstraints"/>
+
+                <ImageButton
+                    android:id="@+id/menuButton"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_more"
+                    android:background="@null"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

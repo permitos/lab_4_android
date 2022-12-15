@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:width="@dimen/x_lg"
+        android:height="@dimen/x_lg"
+        android:gravity="center">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/activity_pink"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_play"
+        android:width="@dimen/md_lg"
+        android:height="@dimen/md_lg"
+        android:gravity="center"/>
+</layer-list>
